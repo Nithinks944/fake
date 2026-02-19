@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "CI pipeline"
+      - name: Validate local test coverage rule
+        shell: pwsh
+        run: ./check-test-coverage-rule.ps1
